@@ -1,11 +1,13 @@
 .container{
     border: 10px dotted black;
+    
+    
 }
 
 .rows{
-
+    
 }
 
 .columns{
-
+    border: 2px solid black;
 }
