@@ -1,12 +1,12 @@
 let containerDiv = document.querySelector(".container");
 let btn = document.querySelector("#gridSize");
 
-function createRows(){
-    for( let i =0;i<16;i++){
+function createRows(count){
+    for( let i =0;i<count;i++){
         let rowDiv = document.createElement("div");
          rowDiv.classList.add("row");
 
-        for (let j=0;j<16;j++){
+        for (let j=0;j<count;j++){
          columnDiv = document.createElement("div");
          columnDiv.classList.add("column");
          
@@ -16,4 +16,10 @@ function createRows(){
     containerDiv.appendChild(rowDiv);
     }
 }
-createRows();
+createRows(16);
+
+btn.addEventListener("click", function(){
+    let gridSize = +prompt("Enter grid size <=100");
+    deleteDefaultGrid();
+    createRows(gridSize);
+})
