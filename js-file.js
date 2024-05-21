@@ -20,6 +20,11 @@ createRows(16);
 
 btn.addEventListener("click", function(){
     let gridSize = +prompt("Enter grid size <=100");
-    deleteDefaultGrid();
+    deleteGrid();
     createRows(gridSize);
 })
+
+function deleteGrid(){
+    while(containerDiv.firstChild)
+        containerDiv.removeChild(containerDiv.firstChild);
+}

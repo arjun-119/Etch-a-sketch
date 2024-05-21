@@ -1,16 +1,25 @@
-.container{
 
-    
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.container{
+  border: 5px solid red;
+  overflow: auto;
 }
 
 .row{
+
   display: flex;
-  justify-content: space-evenly;
   
   
 }
 
 .column{
+
  border: 1px solid black ; 
  padding: 10px;
  text-align: center;
