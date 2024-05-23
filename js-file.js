@@ -15,7 +15,7 @@ function createGrid(count){
     containerDiv.appendChild(rowDiv);
     }
     let selectGrid = document.querySelectorAll(".column");
-selectGrid.forEach(grid => grid.addEventListener("mouseenter",()=>
+    selectGrid.forEach(grid => grid.addEventListener("mouseenter",()=>
     grid.style.backgroundColor = "black"));
 }
 
