@@ -1,29 +1,26 @@
-
 body{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex-grow:0
-
+  justify-content: center;
 }
+
 .container{
-  border: 5px solid red;
+  display: flex;
+  border:5px solid #ff0000;
+  width:450px;
+  height:402px;
   
 }
 
 .row{
-
   display: flex;
-  
-}
+  flex-direction: column;
+  flex: 1;
+  }
 
 .column{
-
- border: 1px solid black ; 
- text-align: center;
- padding: 10px;
- flex: 1;
- 
-    
-} 
+  padding:10px;
+  border:1px solid black;
+  flex:1;
+}

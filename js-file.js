@@ -15,15 +15,18 @@ function createRows(count){
     containerDiv.appendChild(rowDiv);
     }
 
+
 }
 createRows(16);
 
 btn.addEventListener("click", function(){
-    let gridSize = +prompt("Enter grid size <100");
-    if (gridSize<100){
+    let gridSize = +prompt("Enter grid size <=100",16);
+    if (gridSize<=100 && gridSize!== 0 ){
     deleteGrid();
     createRows(gridSize);
     }
+    else
+        return
 })
 
 function deleteGrid(){
