@@ -15,9 +15,16 @@ function createGrid(count){
     containerDiv.appendChild(rowDiv);
     }
     let selectGrid = document.querySelectorAll(".column");
-    selectGrid.forEach(grid => grid.addEventListener("mouseenter",()=>
-    grid.style.backgroundColor = "black"));
-}
+    selectGrid.forEach(grid => grid.addEventListener("mouseenter",
+    function(){
+        let red = Math.floor(Math.random()*255);
+        let blue = Math.floor(Math.random()*255);
+        let green = Math.floor(Math.random()*255);
+        let gridColor = 'rgb(' + green +  ',' + red + ' , ' +
+         blue + ')';  
+        grid.style.backgroundColor = gridColor;
+}))}
+
 
 createGrid(16);
 
