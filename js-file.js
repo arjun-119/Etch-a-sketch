@@ -1,7 +1,7 @@
 let containerDiv = document.querySelector(".container");
 let btn = document.querySelector("#gridSize");
 
-function createRows(count){
+function createGrid(count){
     for( let i =0;i<count;i++){
         let rowDiv = document.createElement("div");
         rowDiv.classList.add("row");
@@ -14,16 +14,18 @@ function createRows(count){
         }
     containerDiv.appendChild(rowDiv);
     }
-
-
+    let selectGrid = document.querySelectorAll(".column");
+selectGrid.forEach(grid => grid.addEventListener("mouseenter",()=>
+    grid.style.backgroundColor = "black"));
 }
-createRows(16);
+
+createGrid(16);
 
 btn.addEventListener("click", function(){
     let gridSize = +prompt("Enter grid size <=100",16);
     if (gridSize<=100 && gridSize!== 0 ){
     deleteGrid();
-    createRows(gridSize);
+    createGrid(gridSize);
     }
     else
         return
